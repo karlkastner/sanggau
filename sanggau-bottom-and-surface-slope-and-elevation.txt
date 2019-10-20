@@ -1,0 +1,27 @@
+1) determined from sea level and upstream level
+1.1) assumption of a exponential profile
+   h = a exp(x/L) has no solution for h = 0 at x=0
+1.2) assumption of a linear profile (lower bound for slope)
+   h = a x, h(0) = 0, h(300km) = 12 => dh/dx = 4e-5
+1.3) by the kinematic wave (surface slope)
+	-> this cannot really be true, because the wave has also to flatten out at the sea
+	dh/dt = 12m/60d = 0.2m/d
+	dh/dt = 3/2 u dh/dx, u ~ 1m/s
+	dh/dx ~ 0.13/(86400) ~ 1.5e-6
+	dynamic slope
+	1/cS0 dh/dt = (1/1.5u) 1.5e-6/4e-5 = (0.2m/86400s / (1.5m/s*1e-4)) < 1.5%
+1.3) by steady state solution of the SWE
+	S_f = S_0
+1.4) vom diffusion wave
+	steady state
+	c dh/dx = d d^h/dx^2
+	h = h0 exp(x/L)
+	=> L = d/c = (C^2 h / 2u)/(3/2 u) = (u^2/S0)/(3/u^2) = 1/(3 S0)
+	=> surface rises only 1/3 as fast as bottom
+
+Error model
+eps_i = (1-p) \tilde eps_i + p eps_{i-1}, where \tilde \eps_i is i.i.d.
+By the variance sum formula
+var(\sum \eps) = \sum var eps_i + \sum \sum cov(eps_i, eps_j)
+
+
